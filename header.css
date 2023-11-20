@@ -1,0 +1,240 @@
+
+#mobileMenu {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    flex-wrap: wrap;
+    z-index: 99;
+    justify-content: space-evenly;
+    align-items: stretch;
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: #fafafa;
+}
+
+#mobileMenu a {
+    width: 100%;
+    text-align: center;
+}
+
+#mobileMenu form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
+header {
+    display: flex; 
+    align-items: stretch;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 100;
+    min-height: 100px;
+    height: auto;
+    top: 0px;
+    left: 0px;
+   background: transparent;
+   width: 100%;
+   /* font-family: 'Plaster', 'Times New Roman', Times, serif; */
+  
+   font-size: 30px;
+   padding: 0px 20px;
+   padding-bottom: 5px;
+   transition: 0.5s all;
+   box-shadow: none;
+   flex-wrap: wrap;
+   
+}
+
+header>a {
+    display: flex;
+    align-items: center;
+}
+header .headerLogo {
+    display: flex;
+    align-items: center;
+    flex: 39%;
+    position: absolute;
+    /* height: 200px; */
+}
+
+header img {
+    display: inline;
+    position: relative;
+    left: 0;
+    height: 2em;
+    width: auto;
+    padding: 0 0;
+    padding: 0 0px;
+}
+
+header .headerLogo h1 {
+    display: inline;
+    font-weight: 900;
+    background: -webkit-linear-gradient(0deg, var(--dark-blue)  0%, var(--light-blue) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0px 0px 100px var(--light-blue);
+  line-height: 50px;
+}
+
+header .headerSections {
+    display:flex;
+    justify-content:flex-start  ;
+    align-items:center;
+    font-size: 16px;
+    font-weight:700;
+    color:var(--dark-blue);
+    flex-wrap: wrap;
+padding: 5px;
+}
+
+.headerSections a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #00b4d8;
+transition: 0.5s all;
+}
+
+.headerSections a:hover::after {
+
+   width: 100%;
+};
+
+
+
+header .headerSections a{
+    display: flex;
+    justify-content: center;
+padding: 5px;
+text-align: center;
+}
+
+header .headerSocials {
+    display: none;
+    flex: 1 0 1%;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+}
+
+header button {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    height: 30px;
+    flex: 0 0 100px;
+    min-width: none;
+    font-size: 15px;
+    font-weight: 700;
+    border: 2px solid var(--dark-blue);
+    color: var(--dark-blue);
+}
+header button:hover {
+
+    height: 30px;
+    font-size: 15px;
+    color: var(--red);
+    border: 2px solid var(--red);
+}
+
+
+
+header .headerSocials a {
+    text-decoration: none;
+    color: var(--dark-blue);
+    margin-right: 15px;
+    /* height: 60px;
+    width: 60px;
+    font-size: 50px; */
+}
+
+header .headerSocials a:hover {
+
+    color: #00b4d8;
+
+}
+
+
+header #menubutton{
+    display: none;
+color: var(--light-blue);
+    padding-right: 10px;
+    font-size: 900;
+}
+
+button {
+display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 25px 20px;
+    height: 50px;
+    font-size: 25px;
+    font-weight: 700;
+    /* border: 2px solid #001c3aff; */
+    border: 1px solid #fafafa;
+    border-radius: 20px;
+    background: transparent;
+
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
+}
+
+  #menubutton input:checked ~ #menubutton { color:green; }
+
+
+
+
+
+@media screen and (max-width: 900px) {
+
+
+    header .headerSections{
+ display: none;
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ flex-direction: column;
+ justify-content: center;
+    }
+    header .headerSocials {
+        display: flex;
+
+    }
+
+    header #menubutton{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    body .section>img {
+        width: 150px;
+        height: auto;
+    }
+
+    header{
+        padding: initial 0;
+    }
+
+
+
+
+
+    header .headerSocials a {
+        margin-right: 10px;
+    }
+
+}
